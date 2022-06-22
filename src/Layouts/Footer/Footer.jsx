@@ -16,10 +16,12 @@ function Footer() {
           <div className={styles.first_block}>
             <h5>Адрес</h5>
             <p>ул. Жайыл-Баатыра 66</p>
+            <hr />
           </div>
           <div className={styles.second_block}>
             <h5>Связь</h5>
             <p>Исмаилова Алтынай Курманбековна</p>
+            <hr />
           </div>
           <div className={styles.third_block}>
             <h5>Контактные данные</h5>
@@ -29,6 +31,11 @@ function Footer() {
             <hr />
             <p>Номер: +996 (508) 101 002</p>
           </div>
+        </div>
+        <hr />
+        <div className={styles.footer_footer}>
+          <h5>Все права защищены КР</h5>
+          <h6>Сделано: Calipso</h6>
         </div>
       </div>
     </div>
