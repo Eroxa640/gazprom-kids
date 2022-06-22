@@ -1,81 +1,96 @@
 .container
-  position: relative
-.position
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 0 auto
   position: absolute
   left: 10%
   right: 10%
-.nav
-  display: flex
-  justify-content: space-between
-  align-items: center
   margin-top: 20px
 .navbar
-  width: 500px
-  display: flex
-  justify-content: space-between
+  position: relative
+  z-index: 101
+.hamburger
+  display: none
 .image
-  max-width: 100%
-.navbar__bg
+  width: 100%
+  height: 100%
+.logoItem
+  z-index: 101
+.header__bg
   width: 100%
   height: 100vh
   object-fit: cover
+.navItem
+  width: 500px
+  display: flex
+  justify-content: space-around
 .nav__link
   text-decoration: none
-  font-family: 'Roboto'
+  color: white
+  font-family: "Roboto", sans-serif
   font-size: 13px
-  font-weight: 400
-  color: #ffffff
 .header
   position: absolute
-  max-width: 470px
+  top: 25%
   left: 11%
-  top: 30%
+  right: 8%
+  z-index: 99
 .header__title
   font-family: "Roboto", sans-serif
-  font-weight: 400
   font-size: 41px
-  color: #ffffff
+  color: white
+  font-weight: 400
   max-width: 170px
 .header__parag
   font-family: "Roboto", sans-serif
-  font-weight: 400
   font-size: 21px
-  color: #ffffff
-  max-width: 470px
-.header__button
+  color: white
+  max-width: 476px
+  font-weight: 400
+.header__btn
   padding: 15px 17px
-  border: none
   background-color: #0A8BFE
+  border: none
   color: white
   font-family: "Roboto", sans-serif
+  font-size: 15px
+  font-weight: 400
+  margin-top: 15px
+  transition: .4s
   cursor: pointer
-  margin-top: 25px
-  transition: .5s
   &:hover
     background-color: white
     color: #0A8BFE
     transform: scale(1.1)
-.hamburger
-  display: none
-@media screen and (max-width: 900px)
+@media screen and ( max-width: 800px )
   .hamburger
     display: block
-  .navbar
-    border-top: 2px solid #605d5d49
-    z-index: -99
-    position: absolute
-    padding: 0 50px
+    z-index: 100
+  .navList
+    position: fixed
+    left: 100%
     bottom: 0
-    right: 0
     width: 100%
-    height: calc( 100vh - 90px )
-    transform: translateY(100%) translateX(100%)
-    display: flex
-    flex-direction: column
-    justify-content: space-around
-    align-items: flex-start
-    background-color: #fff
+    height: 100%
+    background-color: #0A8BFE
     transition: .3s
-  .navbar.navListVisible
-    transform: translateY(100%) translateX(0)
-    overflow-y: scroll
+    z-index: 100
+  .navItem
+    flex-direction: column
+    margin-top: 150px
+    margin-left: 50px
+  .nav__link
+    font-size: 20px
+    padding-top: 10px
+  .navList.navListVisible
+    position: fixed
+    left: 0
+    bottom: 0
+@media screen and ( max-width: 450px )
+  .header__title
+    font-size: 30px
+  .header__parag
+    font-size: 16px
+  .header__btn
+    font-size: 12px

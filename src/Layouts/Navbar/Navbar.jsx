@@ -15,42 +15,48 @@ function Navbar() {
     }
   }, [isOpen]);
   return (
-    <div className={styles.container}>
-      <div
-      className={cn(styles.position, {
-        [styles.navListVisible]: isOpen,
-      })}
-      >
-        <nav className={styles.nav}>
-          <NavLink to='/' className={styles.logo}>
-            <img src="/img/logo-gazprom.png" alt="Логотип Газпром" />
-          </NavLink>
-          <div className={styles.navbar}>
+    <header className={styles.navbar}>
+      <div id="container" className={styles.container}>
+        <NavLink className={styles.logoItem} to="/">
+          <img
+            src='/img/logo-gazprom.png'
+            alt="Ислам Курулуш"
+            className={styles.logo__image}
+          />
+        </NavLink>
+        <div
+          className={cn(styles.navList, {
+            [styles.navListVisible]: isOpen,
+          })}
+          >
+          <nav className={styles.navItem}>
             <NavLink className={styles.nav__link} to='/'>Главная</NavLink>
             <NavLink className={styles.nav__link} to='/team'>Команда</NavLink>
-            <NavLink className={styles.nav__link} to='/section'>Секции</NavLink>
             <NavLink className={styles.nav__link} to='/events'>Мероприятии</NavLink>
-          </div>
-          <div className={styles.hamburger}>
-            <Hamburger
-              color='#0A8BFE' 
-              onToggle={() => setOpen(!isOpen)} 
-              toogled={isOpen}
-              />
-          </div>
-        </nav>
+            <NavLink className={styles.nav__link} to='/sections'>Секции</NavLink>
+          </nav>
+        </div>
+        <div className={styles.hamburger}>
+          <Hamburger
+            color="white"
+            size={30}
+            toggled={isOpen}
+            toggle={setOpen}
+            onToggle={(setOpen) => !setOpen}
+          />
+        </div>
+      </div>
+      <div className={styles.image}>
+        <img className={styles.header__bg} src="/img/gazprom-bg.png" alt="Газпром детям" />
       </div>
       <div className={styles.header}>
         <h3 className={styles.header__title}>Газпром Детям</h3>
         <p className={styles.header__parag}>МП Физкультурно-оздоровительный комплекс при УФКиС мэрии города Бишкек</p>
         <NavLink to='/'>
-          <button className={styles.header__button}>Аренда помещений</button>
+          <button className={styles.header__btn}>Аренда помещения</button>
         </NavLink>
       </div>
-      <div className={styles.image}>
-        <img className={styles.navbar__bg} src="/img/gazprom-bg.png" alt="Газпром детям" />
-      </div>
-    </div>
+    </header>
   )
 }
 
