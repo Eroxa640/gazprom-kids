@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+
+body
+  font-family: 'Roboto', sans-serif
+
+.proud
+  max-width: 1200px
+  margin: 0 auto
+
+.proud_container
+  max-width: 100%
+  margin: 0 auto
+
+.proud_desc h1
+  font-style: normal
+  font-weight: 400
+  font-size: 41px
+  line-height: 50px
+  text-align: center
+
+.proud_desc p
+  font-style: normal
+  font-weight: 400
+  font-size: 21px
+  line-height: 30px
+  color: #737373
+  text-align: center
+
+.grid_block
+  margin-top: 60px
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 40px
+
+.grid
+  border: 1px solid #E8E8E8
+  border-radius: 0px
+  max-height: 220px
+  max-width: 560px
+  transition: .4s all
+  cursor: pointer
+  &:hover
+    transform: scale()
+    border: 1px solid #0A8BFE
+    -webkit-box-shadow: 0px 0px 100px 1px rgba(0, 0, 0, 0.51)
+    -moz-box-shadow: 0px 0px 100px 1px rgba(0, 0, 0, 0.51)
+    box-shadow: 0px 0px 100px 1px rgba(0, 0, 0, 0.51)
+
+.grid h2
+  font-style: normal
+  font-weight: 400
+  font-size: 19px
+  line-height: 28px
+  padding: 38px 0 0 40px
+
+.grid p
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 30px
+  color: #737373
+  max-width: 460px
+  text-align: -webkit-left
+  padding: 0 40px 71px 40px
+
+.button_bottom
+  margin: 0 auto
+  display: flex
+  justify-content: center
+
+.button_bottom button
+  font-style: normal
+  font-weight: 400
+  font-size: 15px
+  line-height: 30px
+  color: #FFFFFF
+  background: #0A8BFE
+  border-radius: 4px
+  padding: 15px 30px
+  border: none
+  margin-top: 51px
+  cursor: pointer
+  transition: .5s
+  &:hover
+    color: #0A8BFE
+    background: #fff
+    -webkit-box-shadow: 0px 33px 47px 1px rgba(10, 139, 254, 0.51)
+    -moz-box-shadow: 0px 33px 47px 1px rgba(10, 139, 254, 0.51)
+    box-shadow: 0px 33px 47px 1px rgba(10, 139, 254, 0.51)
+    transform: scale(1.1)
+
+@media screen and (max-width: 814px)
+  .grid_block
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    max-width: 490px
+    margin: 0 auto
