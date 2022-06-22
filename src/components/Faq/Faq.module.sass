@@ -2,7 +2,7 @@ $bg: #fff
 $text: #7288a2
 $gray: #4d5974
 $lightgray: #e5e5e5
-$blue: #03b5d2
+$blue: #0A8BFE
 
 .faq
   margin-top: 100px
@@ -30,7 +30,9 @@ $blue: #03b5d2
 
   button
     position: relative
-    display: block
+    display: flex
+    align-items: center
+    justify-content: space-between
     text-align: left
     width: 100%
     padding: 1em 0
@@ -40,6 +42,7 @@ $blue: #03b5d2
     border: none
     background: none
     outline: none
+    transition: .6s
     &:hover, &:focus
       cursor: pointer
       color: $blue
@@ -60,6 +63,7 @@ $blue: #03b5d2
       height: 22px
       border: 1px solid
       border-radius: 22px
+      transition: .6s
       &::before
         display: block
         position: absolute
@@ -67,6 +71,7 @@ $blue: #03b5d2
         top: 9px
         left: 5px
         width: 10px
+        transition: .6s
         height: 2px
         background: currentColor
 
@@ -78,20 +83,24 @@ $blue: #03b5d2
         left: 9px
         width: 2px
         height: 10px
+        transition: .6s
         background: currentColor
 
   button[aria-expanded='true']
     color: $blue
+    transition: .6s
 
   &
     &::after
       width: 0
+      transition: .6s
 
     + .accordion-content
       opacity: 1
       max-height: 9em
       transition: all 200ms linear
       will-change: opacity, max-height
+      transition: .6s
 
   .accordion-content
     opacity: 0
@@ -99,7 +108,34 @@ $blue: #03b5d2
     overflow: hidden
     transition: opacity 200ms linear, max-height 200ms linear
     will-change: opacity, max-height
+    transition: .6s
     p
       font-size: 1rem
       font-weight: 300
       margin: 2em 0
+
+.math
+  border: 2px solid #E8E8E8
+  background: none
+  width: 28px
+  height: 28px
+  text-align: center
+  border-radius: 50%
+  display: flex
+  align-items: center
+  font-weight: 700
+  justify-content: center
+.accordion_button
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.accordion_title
+  font-style: normal
+  font-weight: 400
+  font-size: 19px
+  line-height: 24px
+  color: #000
+
+hr
+  background: #E8E8E8
