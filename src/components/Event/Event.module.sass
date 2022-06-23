@@ -1,6 +1,7 @@
 .event_head
   background: #0A8BFE
   padding-top: 100px
+  padding-bottom: 70px
   margin-top: 100px
 
 .event
@@ -10,6 +11,9 @@
 .event_container
   max-width: 100%
   margin: 0 auto
+
+.event_desc
+  padding: 40px
 
 .event_desc h1
   font-style: normal
@@ -87,4 +91,51 @@
   width: 166px
   margin: 0 auto
   margin-top: 40px
-  margin-bottom: 40px
+  transition: .4s
+  cursor: pointer
+  &:hover
+    transform: scale(1.1)
+    color: #fff
+    background: #0A8BFE
+    -webkit-box-shadow: 0px 26px 34px 26px rgba(255, 255, 255, 0.57)
+    -moz-box-shadow: 0px 26px 34px 26px rgba(255, 255, 255, 0.57)
+    box-shadow: 0px 26px 34px 26px rgba(255, 255, 255, 0.57)
+
+@media screen and (max-width: 1150px)
+  .event_event
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    justify-content: center
+  .card_container
+    max-width: 545px
+    margin: 0 auto
+
+@media screen and (max-width: 565px)
+  .event_info
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    justify-content: flex-end
+    text-align: center
+  .event_card
+    width: 310px
+    margin: 0 auto
+  .card_container
+    max-width: 280px
+    margin: 0 auto
+  .card_container h1
+    font-size: 20px
+
+@media screen and (max-width: 425px)
+  .event_desc h1
+    font-size: 33px
+
+@media screen and (max-width: 375px)
+  .event_info
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    justify-content: center
+    text-align: center
+  .event_block
+    margin: 0 auto
+  .event_desc h1
+    font-size: 27px
