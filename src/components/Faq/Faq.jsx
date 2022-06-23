@@ -46,10 +46,9 @@ function Faq() {
                   </span>
                 )}
               </button>
-              <hr />
               {isOpen ? (
                 <div className={styles.accordion_content}>
-                  <p>
+                  <p className={styles.parag}>
                     Номер : +996 (777) 101 002 <br />
                     Email : ailinchoy@gmail.com <br />
                     Адрес : г.Бишкек, Ленинский район <br />
@@ -78,10 +77,9 @@ function Faq() {
                   </span>
                 )}
               </button>
-              <hr />
               {isOpen2 ? (
                 <div className={styles.accordion_content}>
-                  <p>
+                  <p className={styles.parag}>
                     У нас проходят множество мероприятий но особенно проходят
                     мероприятии по тхэквандо GTF
                   </p>
@@ -107,10 +105,9 @@ function Faq() {
                   </span>
                 )}
               </button>
-              <hr />
               {isOpen3 ? (
                 <div className={styles.accordion_content}>
-                  <p>
+                  <p className={styles.parag}>
                     Главное событие этого года будет турнир по тхэквандо GTF
                     между СНГ, где примут участие только профессиональные бойцы
                     своих категории
