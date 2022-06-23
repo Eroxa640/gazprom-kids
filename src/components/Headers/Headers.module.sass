@@ -39,3 +39,19 @@
   transition: .4s
   &:hover
     font-size: 17px
+@media screen and ( max-width: 900px )
+  .header__info
+    display: block
+    text-align: center
+    padding: 30px 20px
+  .section__parag
+    max-width: none
+  .header__grid
+    margin: 0 auto
+  .item__title
+    font-size: 14px
+@media screen and ( max-width: 500px )
+  .section__title
+    font-size: 23px
+  .header__grid
+    grid-template-columns: repeat(2, 4fr)
