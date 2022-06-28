@@ -1,7 +1,17 @@
 import React from "react";
 import styles from "./Event.module.sass";
 import {motion} from 'framer-motion'
+import { useEffect } from "react";
+import {useDispatch, useSelector} from 'react-redux'
+import { eventFetch } from "../../store/reducers/event.reducer";
+import {NavLink} from 'react-router-dom'
 function Event() {
+  const dispatch = useDispatch()
+  const store = useSelector(store => store)
+  const events = store.events.event
+  useEffect(() => {
+    dispatch(eventFetch())
+  }, [dispatch])
   let firstVar = {
     hidden: {
       x: -20,
@@ -101,52 +111,23 @@ function Event() {
             </div>
 
             <div className={styles.event_event}>
-              <motion.div className={styles.event_card}>
-                <div className={styles.card_container}>
-                  <img src="/img/card_1.png" />
-                  <h1>Успешные мероприятия</h1>
-                  <p>
-                    В нашем комплексе проводят тхэквандо GTF которые признаны
-                    самой лучшей федерацией в СНГ
-                  </p>
-                </div>
-              </motion.div>
-
-              <div className={styles.event_card}>
-                <div className={styles.card_container}>
-                  <img src="/img/card_2.png" />
-                  <h1>Благотворительные мероприятия</h1>
-                  <p>
-                    Мы проводим благотворительные мероприятия детям которые
-                    нуждаются в нашей помощи
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.event_card}>
-                <div className={styles.card_container}>
-                  <img src="/img/card_3.png" />
-                  <h1>Государственные мероприятия</h1>
-                  <p>
-                    У нас тесное взаимодействие с нашим государством и мы всегда
-                    потдерживаю друг друга в любых ситуациях
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.event_card}>
-                <div className={styles.card_container}>
-                  <img src="/img/card_4.png" />
-                  <h1>Иностранные мероприятия</h1>
-                  <p>
-                    Мы взаимодействуем нетолько с нашей страной но и другими
-                    странами такими как (Казахстан и Узбекистан)
-                  </p>
-                </div>
-              </div>
+              {
+                events.map(item => {
+                  return (
+                  <div key={item.id} className={styles.event_card}>
+                    <div className={styles.card_container}>
+                      <img src={item.image.formats.small.url} alt={item.title} />
+                      <h1>{item.title}</h1>
+                      <p>
+                        {item.parag}
+                      </p>
+                    </div>
+                  </div>
+                  )
+                })
+              }
             </div>
-
-            <button className={styles.event_button}>Подробнее</button>
+            <NavLink className={styles.navlink} to='/events'><button className={styles.event_button}>Подробнее</button></NavLink>
           </div>
         </div>
       </div>
