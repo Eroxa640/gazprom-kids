@@ -52,7 +52,7 @@ function Navbar() {
       <div className={styles.header}>
         <h3 className={styles.header__title}>Газпром Детям</h3>
         <p className={styles.header__parag}>МП Физкультурно-оздоровительный комплекс при УФКиС мэрии города Бишкек</p>
-        <NavLink to='/'>
+        <NavLink to='/rent'>
           <button className={styles.header__btn}>Аренда помещения</button>
         </NavLink>
       </div>
