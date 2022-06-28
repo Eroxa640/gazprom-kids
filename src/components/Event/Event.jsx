@@ -1,8 +1,35 @@
 import React from "react";
 import styles from "./Event.module.sass";
-import "aos";
-
+import {motion} from 'framer-motion'
 function Event() {
+  let firstVar = {
+    hidden: {
+      x: -20,
+      opacity: 0,
+    },
+    visible: (num) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: num * 0.1,
+      },
+    }),
+  };
+  let secondVar = {
+    hidden: {
+      x: 40,
+      opacity: 0,
+    },
+    visible: (num) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        delay: num * 0.1,
+      },
+    }),
+  };
   return (
     <div className={styles.event_head}>
       <div className={styles.event}>
@@ -10,7 +37,17 @@ function Event() {
           <div className={styles.event_desc}>
             <h1>Какие мероприятия проходят у нас</h1>
             <div className={styles.event_info}>
-              <div className={styles.event_block}>
+              <motion.div 
+                className={styles.event_block}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{
+                  once: false,
+                  amount: 1,
+                }}
+                variants={secondVar}
+                custom={1}
+                >
                 <h2
                   data-aos="fade-up"
                   data-aos-anchor-placement="bottom-center"
@@ -18,23 +55,53 @@ function Event() {
                   80+
                 </h2>
                 <p>Успешных мероприятий</p>
-              </div>
-              <div className={styles.event_block}>
+              </motion.div>
+              <motion.div
+                className={styles.event_block}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{
+                  once: false,
+                  amount: 1,
+                }}
+                variants={secondVar}
+                custom={1}
+                >
                 <h2>35+</h2>
                 <p>Благотворительных празднований</p>
-              </div>
-              <div className={styles.event_block}>
+              </motion.div>
+              <motion.div
+                className={styles.event_block}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{
+                  once: false,
+                  amount: 1,
+                }}
+                variants={firstVar}
+                custom={1}
+                >
                 <h2>10</h2>
                 <p>Государственных мероприятий</p>
-              </div>
-              <div className={styles.event_block}>
+              </motion.div>
+              <motion.div
+                className={styles.event_block}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{
+                  once: false,
+                  amount: 1,
+                }}
+                variants={firstVar}
+                custom={1}
+                >
                 <h2>23</h2>
                 <p>Иностранных меропиятий</p>
-              </div>
+              </motion.div>
             </div>
 
             <div className={styles.event_event}>
-              <div className={styles.event_card}>
+              <motion.div className={styles.event_card}>
                 <div className={styles.card_container}>
                   <img src="/img/card_1.png" />
                   <h1>Успешные мероприятия</h1>
@@ -43,7 +110,7 @@ function Event() {
                     самой лучшей федерацией в СНГ
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
               <div className={styles.event_card}>
                 <div className={styles.card_container}>
