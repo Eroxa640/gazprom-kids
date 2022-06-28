@@ -1,9 +1,6 @@
 import React from "react";
 import styles from "./Proud.module.sass";
-import Scroll from 'react-scroll';
 import {Link} from 'react-scroll'
-
-const scroll = Scroll.animateScroll;
 
 function Proud() {
   return (

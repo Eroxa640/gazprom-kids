@@ -30,10 +30,10 @@ function Navbar() {
           })}
           >
           <nav className={styles.navItem}>
-            <NavLink className={styles.nav__link} to='/'>Главная</NavLink>
-            <NavLink className={styles.nav__link} to='/team'>Команда</NavLink>
-            <NavLink className={styles.nav__link} to='/events'>Мероприятии</NavLink>
-            <NavLink className={styles.nav__link} to='/sections'>Секции</NavLink>
+            <NavLink onClick={() => setOpen(false)} className={styles.nav__link} to='/'>Главная</NavLink>
+            <NavLink onClick={() => setOpen(false)} className={styles.nav__link} to='/team'>Команда</NavLink>
+            <NavLink onClick={() => setOpen(false)} className={styles.nav__link} to='/events'>Мероприятии</NavLink>
+            <NavLink onClick={() => setOpen(false)} className={styles.nav__link} to='/sections'>Секции</NavLink>
           </nav>
         </div>
         <div className={styles.hamburger}>
