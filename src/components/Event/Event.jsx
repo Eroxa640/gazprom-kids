@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Event.module.sass";
+import "aos";
 
 function Event() {
   return (
@@ -10,7 +11,12 @@ function Event() {
             <h1>Какие мероприятия проходят у нас</h1>
             <div className={styles.event_info}>
               <div className={styles.event_block}>
-                <h2>80+</h2>
+                <h2
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-center"
+                >
+                  80+
+                </h2>
                 <p>Успешных мероприятий</p>
               </div>
               <div className={styles.event_block}>
