@@ -3,7 +3,7 @@ import styles from "./Footer.module.sass";
 
 function Footer() {
   return (
-    <div className={styles.footer_head}>
+    <div id="contact" className={styles.footer_head}>
       <div className={styles.footer}>
         <div className={styles.footer_container}>
           <div className={styles.footer_top}>
