@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
-    "framer-motion": "^6.3.12",
+    "framer-motion": "^6.3.16",
     "hamburger-react": "^2.5.0",
     "node-sass": "^7.0.1",
     "react": "^18.2.0",
