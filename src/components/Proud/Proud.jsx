@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Proud.module.sass";
+import {motion} from 'framer-motion'
 
 function Proud() {
   return (
