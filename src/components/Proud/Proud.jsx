@@ -43,7 +43,7 @@ function Proud() {
               initial="hidden"
               whileInView="visible"
               viewport={{
-                once: false,
+                once: true,
                 amount: 1,
               }}
               variants={firstVar}
@@ -61,7 +61,7 @@ function Proud() {
               initial="hidden"
               whileInView="visible"
               viewport={{
-                once: false,
+                once: true,
                 amount: 1,
               }}
               variants={secondVar}
@@ -79,7 +79,7 @@ function Proud() {
               initial="hidden"
               whileInView="visible"
               viewport={{
-                once: false,
+                once: true,
                 amount: 1,
               }}
               variants={firstVar}
@@ -97,7 +97,7 @@ function Proud() {
               initial="hidden"
               whileInView="visible"
               viewport={{
-                once: false,
+                once: true,
                 amount: 1,
               }}
               variants={secondVar}
