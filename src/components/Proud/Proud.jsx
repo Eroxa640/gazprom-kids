@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Proud.module.sass";
-import {motion} from 'framer-motion'
+import Scroll from 'react-scroll';
+
+const scroll = Scroll.animateScroll;
 
 function Proud() {
   return (
@@ -40,7 +42,7 @@ function Proud() {
             </div>
           </div>
           <div className={styles.button_bottom}>
-            <button>Наши контакты</button>
+            <button onClick={() => scroll.scrollTo(5000)} >Наши контакты</button>
           </div>
         </div>
       </div>
