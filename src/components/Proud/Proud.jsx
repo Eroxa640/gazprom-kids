@@ -5,28 +5,28 @@ import {motion} from 'framer-motion'
 function Proud() {
   let firstVar = {
     hidden: {
-      x: -20,
+      x: -10,
       opacity: 0,
     },
     visible: (num) => ({
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.1,
         delay: num * 0.1,
       },
     }),
   };
   let secondVar = {
     hidden: {
-      x: 40,
+      x: 10,
       opacity: 0,
     },
     visible: (num) => ({
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.1,
         delay: num * 0.1,
       },
     }),
