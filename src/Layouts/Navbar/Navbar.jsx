@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react'
 import styles from './Navbar.module.sass'
-import {NavLink} from 'react-router-dom'
+import {NavLink, useLocation} from 'react-router-dom'
 import { Divide as Hamburger } from 'hamburger-react'
 import { useState } from 'react'
-import cn from 'classnames'
+import cn from 'classnames' 
 
 function Navbar() {
+  const location = useLocation();
+  const [url, setUrl] = useState(null);
+  useEffect(() => {
+    setUrl(location.pathname);
+  }, [location]);
   const [isOpen, setOpen] = useState(false)
   useEffect(() => {
     if (isOpen) {
@@ -30,10 +35,10 @@ function Navbar() {
           })}
           >
           <nav className={styles.navItem}>
-            <NavLink onClick={() => setOpen(false)} className={styles.nav__link} to='/'>Главная</NavLink>
-            <NavLink onClick={() => setOpen(false)} className={styles.nav__link} to='/team'>Команда</NavLink>
-            <NavLink onClick={() => setOpen(false)} className={styles.nav__link} to='/events'>Мероприятии</NavLink>
-            <NavLink onClick={() => setOpen(false)} className={styles.nav__link} to='/sections'>Секции</NavLink>
+            <NavLink onClick={() => setOpen(false)} className={styles.nav__link + (url === '/' ? ` ${styles.active}` : '')} to='/'>Главная</NavLink>
+            <NavLink onClick={() => setOpen(false)} className={styles.nav__link + (url === '/team' ? ` ${styles.active}` : '')} to='/team'>Команда</NavLink>
+            <NavLink onClick={() => setOpen(false)} className={styles.nav__link + (url === '/events' ? ` ${styles.active}` : '')} to='/events'>Мероприятии</NavLink>
+            <NavLink onClick={() => setOpen(false)} className={styles.nav__link + (url === '/sections' ? ` ${styles.active}` : '')} to='/sections'>Секции</NavLink>
           </nav>
         </div>
         <div className={styles.hamburger}>
